@@ -1,6 +1,10 @@
+
 # Overview
 
 Predicting urban events such as transportation resource demand, traffic accidents, and traffic volumes relies on spatio-temporal neural methods. Existing approaches frequently use a common set of urban features (typically held by government agencies) such as road network and weather. Even as data is increasingly available through open data portals, identifying which datasets will improve a model amounts to trial and error, preparing the relevant datasets for use in neural models requires substantial effort, not all relevant datasets are available publicly due to privacy and administrative limitations, and training separate models for each task is expensive and redundant. We explore a different approach in which common set of integrated features learned across all relevant datasets can be pre-trained as a single data representation and reused across many tasks. At the same time, we remove the effects of sensitive attributes (i.e., race, income) from the pre-trained representation. Government agencies can periodically release an EquiTensor that encodes the dynamic features of the city to be used directly to improve prediction tasks. These features can provide better utility for city data, complementing “raw” access through open data portals, and potentially provide a single point of control for privacy and bias management. To this end, we propose a neural architecture to integrate a significant number of urban datasets into a learned spatiotemporal tensor, analogous to the role of pre-trained word vectors for NLP applications.
+
+![Equitensors system overview. An autoencoder for multiple urban datasets penalized with spatial fairness loss](https://github.com/urbanalytics/equitensors/blob/master/equitensorsarchitecture.png?raw=true)
+
 
 # Getting Started
 
